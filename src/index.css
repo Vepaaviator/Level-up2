@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Jost:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Jost", system-ui, -apple-system, sans-serif;
+  
+  --color-gold: #c5a85c;
+  --color-gold-light: #dfc47d;
+  --color-gold-dark: #a68943;
+  --color-dark-bg: #141412;       /* Глубокий тёплый антрацит */
+  --color-dark-card: #1d1d1b;     /* Тёплый графит для карточек */
+  --color-dark-card-lighter: #262623;
+  --color-dark-input: #222220;
+  --color-dark-border: #2c2c28;
+}
+
+body {
+  background-color: var(--color-dark-bg);
+  color: #e5e5e3;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Скроллбар в премиальном стиле */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-dark-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-dark-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-dark);
+}
+
+/* Кастомный класс для золотой пилюлеобразной кнопки */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: var(--color-gold);
+  color: #141412;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid var(--color-gold);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+.btn-gold:hover:not(:disabled) {
+  background-color: transparent;
+  color: var(--color-gold);
+  transform: translateY(-1px);
+}
+.btn-gold:active:not(:disabled) {
+  transform: translateY(0);
+}
+.btn-gold:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Засечковые заголовки */
+h1, h2, h3, h4, .font-serif-luxury {
+  font-family: var(--font-serif);
+}

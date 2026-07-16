@@ -1,0 +1,6 @@
+{
+  "name": "Level Up",
+  "description": "Премиальный интернет-магазин одежды и автотоваров Level Up с изысканным дизайном в тёмных тёплых тонах с золотыми акцентами.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
